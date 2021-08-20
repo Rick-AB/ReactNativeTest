@@ -17,7 +17,7 @@ import {
   View,
 } from 'react-native';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs'
+import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import Search from './components/Search';
 import FoodSreen from './Screens/FoodSreen';
 
@@ -56,30 +56,28 @@ const Home = () => {
         })}
       </ScrollView>
 
-      <topTab.Navigator screenOptions={{
-        tabBarIndicatorStyle: {backgroundColor:'#1FCC79', height: 4 }
-      }}>
-        <topTab.Screen name={'Left'} component={FoodSreen} options={
-          
-        } />
+      <topTab.Navigator
+        screenOptions={{
+          tabBarIndicatorStyle: {backgroundColor: '#1FCC79', height: 4},
+        }}>
+        <topTab.Screen name={'Left'} component={FoodSreen} />
         <topTab.Screen name={'Right'} component={FoodSreen} />
       </topTab.Navigator>
     </SafeAreaView>
-
   );
-}
+};
 
 const App = () => {
-  
-return (
-    <bottomTab.Navigator >
-      <bottomTab.Screen name= 'Home' component={Home} />
-      <bottomTab.Screen name= 'Upload' component={Home} />
-      <bottomTab.Screen name= 'Scan' component={Home} />
-      <bottomTab.Screen name= 'Notification' component={Home} />
-      <bottomTab.Screen name= 'Profile' component={Home} />
+  return (
+    <bottomTab.Navigator>
+      <bottomTab.Screen name="Home" component={Home} />
+      <bottomTab.Screen name="Upload" component={Home} />
+      <bottomTab.Screen name="Scan" component={Home} />
+      <bottomTab.Screen name="Notification" component={Home} />
+      <bottomTab.Screen name="Profile" component={Home} />
     </bottomTab.Navigator>
-  )};
+  );
+};
 
 const styles = StyleSheet.create({
   categoryItems: {
